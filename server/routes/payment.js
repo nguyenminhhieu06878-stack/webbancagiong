@@ -39,7 +39,7 @@ router.post('/create-payment-link', authenticateToken, async (req, res) => {
       return res.status(400).json({ error: 'Thiếu thông tin đơn hàng' });
     }
 
-    // Tạo payment link với PayOS
+    // Tạo payment link với PayOS v2 API
     const paymentData = {
       orderCode: Number(orderId),
       amount: Number(amount),
@@ -48,6 +48,7 @@ router.post('/create-payment-link', authenticateToken, async (req, res) => {
       cancelUrl: cancelUrl || `${process.env.CLIENT_URL || 'http://localhost:3000'}/payment/cancel`,
     };
 
+    // Sử dụng paymentRequests().create() theo PayOS v2
     const paymentLinkResponse = await payos.createPaymentLink(paymentData);
 
     res.json({
@@ -67,6 +68,12 @@ router.post('/create-payment-link', authenticateToken, async (req, res) => {
 // GET - Kiểm tra trạng thái thanh toán
 router.get('/check-payment/:orderId', authenticateToken, async (req, res) => {
   try {
+    if (!payos) {
+      return res.status(503).json({ 
+        error: 'PayOS chưa được cấu hình. Vui lòng sử dụng phương thức thanh toán COD.' 
+      });
+    }
+
     const { orderId } = req.params;
 
     const paymentInfo = await payos.getPaymentLinkInformation(Number(orderId));
@@ -88,45 +95,62 @@ router.get('/check-payment/:orderId', authenticateToken, async (req, res) => {
 // POST - Webhook nhận thông báo từ PayOS
 router.post('/webhook', async (req, res) => {
   try {
+    if (!payos) {
+      return res.status(503).json({ error: 'PayOS not configured' });
+    }
+
     const webhookData = req.body;
     
     console.log('PayOS Webhook received:', webhookData);
 
-    // Verify webhook signature
-    const isValid = payos.verifyPaymentWebhookData(webhookData);
+    // Verify webhook signature using PayOS v2
+    const verifiedData = payos.verifyPaymentWebhookData(webhookData);
     
-    if (!isValid) {
+    if (!verifiedData) {
       return res.status(400).json({ error: 'Invalid webhook signature' });
     }
 
     // Xử lý theo trạng thái thanh toán
-    const { orderCode, status } = webhookData.data;
+    const { orderCode, code } = verifiedData;
 
-    if (status === 'PAID') {
+    // code === "00" means payment successful
+    if (code === '00') {
       // Cập nhật trạng thái đơn hàng trong database
       db.run(
-        'UPDATE orders SET payment_status = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?',
-        ['paid', orderCode],
+        'UPDATE orders SET payment_status = ?, status = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?',
+        ['paid', 'processing', orderCode],
         (err) => {
           if (err) {
             console.error('Lỗi cập nhật trạng thái đơn hàng:', err);
           } else {
-            console.log(`Đơn hàng #${orderCode} đã được thanh toán`);
+            console.log(`✅ Đơn hàng #${orderCode} đã được thanh toán thành công`);
           }
         }
       );
     }
 
-    res.json({ success: true });
+    res.json({ 
+      success: true,
+      message: 'Webhook processed successfully'
+    });
   } catch (error) {
     console.error('Lỗi xử lý webhook:', error);
-    res.status(500).json({ error: 'Webhook processing failed' });
+    res.status(500).json({ 
+      error: 'Webhook processing failed',
+      details: error.message 
+    });
   }
 });
 
 // POST - Hủy link thanh toán
 router.post('/cancel-payment/:orderId', authenticateToken, async (req, res) => {
   try {
+    if (!payos) {
+      return res.status(503).json({ 
+        error: 'PayOS chưa được cấu hình. Vui lòng sử dụng phương thức thanh toán COD.' 
+      });
+    }
+
     const { orderId } = req.params;
     const { cancellationReason } = req.body;
 
