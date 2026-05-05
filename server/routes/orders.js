@@ -27,8 +27,14 @@ const authenticateToken = (req, res, next) => {
 router.get('/', authenticateToken, (req, res) => {
   const customerId = req.user.id;
 
+  // Chỉ hiển thị đơn hàng:
+  // - COD: Luôn hiển thị
+  // - PayOS: Chỉ hiển thị khi đã thanh toán (payment_status = 'paid')
   db.all(
-    `SELECT * FROM orders WHERE customer_id = ? ORDER BY created_at DESC`,
+    `SELECT * FROM orders 
+     WHERE customer_id = ? 
+     AND (payment_method = 'cod' OR (payment_method = 'payos' AND payment_status = 'paid'))
+     ORDER BY created_at DESC`,
     [customerId],
     (err, orders) => {
       if (err) {
