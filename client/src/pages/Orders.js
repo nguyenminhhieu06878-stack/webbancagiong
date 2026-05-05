@@ -62,9 +62,11 @@ const Orders = () => {
     switch (status) {
       case 'pending':
         return 'Chờ xác nhận';
-      case 'processing':
+      case 'confirmed':
+        return 'Đã xác nhận';
+      case 'shipping':
         return 'Đang giao hàng';
-      case 'completed':
+      case 'delivered':
         return 'Hoàn thành';
       case 'cancelled':
         return 'Đã hủy';
@@ -77,9 +79,11 @@ const Orders = () => {
     switch (status) {
       case 'pending':
         return 'status-pending';
-      case 'processing':
+      case 'confirmed':
+        return 'status-confirmed';
+      case 'shipping':
         return 'status-processing';
-      case 'completed':
+      case 'delivered':
         return 'status-completed';
       case 'cancelled':
         return 'status-cancelled';
@@ -141,16 +145,22 @@ const Orders = () => {
             Chờ xác nhận ({orders.filter(o => o.status === 'pending').length})
           </button>
           <button 
-            className={`filter-btn ${filter === 'processing' ? 'active' : ''}`}
-            onClick={() => setFilter('processing')}
+            className={`filter-btn ${filter === 'confirmed' ? 'active' : ''}`}
+            onClick={() => setFilter('confirmed')}
           >
-            Đang giao ({orders.filter(o => o.status === 'processing').length})
+            Đã xác nhận ({orders.filter(o => o.status === 'confirmed').length})
           </button>
           <button 
-            className={`filter-btn ${filter === 'completed' ? 'active' : ''}`}
-            onClick={() => setFilter('completed')}
+            className={`filter-btn ${filter === 'shipping' ? 'active' : ''}`}
+            onClick={() => setFilter('shipping')}
           >
-            Hoàn thành ({orders.filter(o => o.status === 'completed').length})
+            Đang giao ({orders.filter(o => o.status === 'shipping').length})
+          </button>
+          <button 
+            className={`filter-btn ${filter === 'delivered' ? 'active' : ''}`}
+            onClick={() => setFilter('delivered')}
+          >
+            Hoàn thành ({orders.filter(o => o.status === 'delivered').length})
           </button>
           <button 
             className={`filter-btn ${filter === 'cancelled' ? 'active' : ''}`}

@@ -64,9 +64,11 @@ const OrderDetail = () => {
     switch (status) {
       case 'pending':
         return 'Chờ xác nhận';
-      case 'processing':
+      case 'confirmed':
+        return 'Đã xác nhận';
+      case 'shipping':
         return 'Đang giao hàng';
-      case 'completed':
+      case 'delivered':
         return 'Hoàn thành';
       case 'cancelled':
         return 'Đã hủy';
@@ -79,9 +81,11 @@ const OrderDetail = () => {
     switch (status) {
       case 'pending':
         return 'status-pending';
-      case 'processing':
+      case 'confirmed':
+        return 'status-confirmed';
+      case 'shipping':
         return 'status-processing';
-      case 'completed':
+      case 'delivered':
         return 'status-completed';
       case 'cancelled':
         return 'status-cancelled';
