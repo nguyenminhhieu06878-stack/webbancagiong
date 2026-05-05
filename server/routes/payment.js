@@ -98,38 +98,56 @@ router.get('/check-payment/:orderId', authenticateToken, async (req, res) => {
 // POST - Webhook nhận thông báo từ PayOS
 router.post('/webhook', async (req, res) => {
   try {
+    console.log('=== PayOS Webhook Called ===');
+    console.log('Request body:', JSON.stringify(req.body, null, 2));
+    
     if (!payos) {
+      console.error('❌ PayOS not configured');
       return res.status(503).json({ error: 'PayOS not configured' });
     }
 
     const webhookData = req.body;
-    
-    console.log('PayOS Webhook received:', webhookData);
 
     // Verify webhook signature using PayOS v2
-    const verifiedData = await payos.webhooks.verify(webhookData);
+    let verifiedData;
+    try {
+      verifiedData = await payos.webhooks.verify(webhookData);
+      console.log('✅ Webhook verified:', JSON.stringify(verifiedData, null, 2));
+    } catch (verifyError) {
+      console.error('❌ Webhook verification failed:', verifyError);
+      return res.status(400).json({ error: 'Invalid webhook signature', details: verifyError.message });
+    }
     
     if (!verifiedData) {
+      console.error('❌ Verified data is null');
       return res.status(400).json({ error: 'Invalid webhook signature' });
     }
 
     // Xử lý theo trạng thái thanh toán
     const { orderCode, code } = verifiedData;
+    console.log(`Processing order #${orderCode} with code: ${code}`);
 
     // code === "00" means payment successful
     if (code === '00') {
+      console.log(`💰 Payment successful for order #${orderCode}`);
+      
       // Cập nhật trạng thái đơn hàng trong database
       db.run(
         'UPDATE orders SET payment_status = ?, status = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?',
-        ['paid', 'processing', orderCode],
-        (err) => {
+        ['paid', 'confirmed', orderCode],
+        function(err) {
           if (err) {
-            console.error('Lỗi cập nhật trạng thái đơn hàng:', err);
+            console.error('❌ Lỗi cập nhật trạng thái đơn hàng:', err);
           } else {
-            console.log(`✅ Đơn hàng #${orderCode} đã được thanh toán thành công`);
+            console.log(`✅ Đơn hàng #${orderCode} đã được cập nhật: ${this.changes} rows affected`);
+            if (this.changes === 0) {
+              console.warn(`⚠️  Không tìm thấy đơn hàng #${orderCode} trong database`);
+            }
           }
         }
       );
+    } else {
+      console.log(`⚠️  Payment not successful. Code: ${code}`);
     }
 
     res.json({ 
@@ -137,7 +155,7 @@ router.post('/webhook', async (req, res) => {
       message: 'Webhook processed successfully'
     });
   } catch (error) {
-    console.error('Lỗi xử lý webhook:', error);
+    console.error('❌ Lỗi xử lý webhook:', error);
     res.status(500).json({ 
       error: 'Webhook processing failed',
       details: error.message 
