@@ -48,8 +48,8 @@ router.post('/create-payment-link', authenticateToken, async (req, res) => {
       cancelUrl: cancelUrl || `${process.env.CLIENT_URL || 'http://localhost:3000'}/payment/cancel`,
     };
 
-    // Sử dụng paymentRequests().create() theo PayOS v2
-    const paymentLinkResponse = await payos.createPaymentLink(paymentData);
+    // Sử dụng paymentRequests.create() theo PayOS v2
+    const paymentLinkResponse = await payos.paymentRequests.create(paymentData);
 
     res.json({
       success: true,
@@ -76,7 +76,7 @@ router.get('/check-payment/:orderId', authenticateToken, async (req, res) => {
 
     const { orderId } = req.params;
 
-    const paymentInfo = await payos.getPaymentLinkInformation(Number(orderId));
+    const paymentInfo = await payos.paymentRequests.get(Number(orderId));
 
     res.json({
       success: true,
@@ -104,7 +104,7 @@ router.post('/webhook', async (req, res) => {
     console.log('PayOS Webhook received:', webhookData);
 
     // Verify webhook signature using PayOS v2
-    const verifiedData = payos.verifyPaymentWebhookData(webhookData);
+    const verifiedData = await payos.webhooks.verify(webhookData);
     
     if (!verifiedData) {
       return res.status(400).json({ error: 'Invalid webhook signature' });
@@ -154,7 +154,7 @@ router.post('/cancel-payment/:orderId', authenticateToken, async (req, res) => {
     const { orderId } = req.params;
     const { cancellationReason } = req.body;
 
-    await payos.cancelPaymentLink(
+    await payos.paymentRequests.cancel(
       Number(orderId),
       cancellationReason || 'Khách hàng hủy đơn hàng'
     );
