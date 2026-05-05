@@ -84,7 +84,7 @@ const Contact = () => {
                   </div>
                   <div className="method-text">
                     <p>Bán hàng & tư vấn</p>
-                    <strong>076 999 9295</strong>
+                    <strong>089 958 9259</strong>
                   </div>
                 </div>
               </div>

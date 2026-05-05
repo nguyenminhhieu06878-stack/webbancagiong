@@ -61,7 +61,7 @@ const PaymentSupport = () => {
                 <li>Nội dung chuyển khoản: [Tên khách] – [Loại giống] – [SĐT hoặc Zalo]</li>
               </ul>
               <p className="note-text">
-                <strong>Xác nhận:</strong> Hãng vào khi chuyển khoản: 076 999 9295 (Zalo/Call)
+                <strong>Xác nhận:</strong> Hãng vào khi chuyển khoản: 089 958 9259 (Zalo/Call)
               </p>
 
               <h4>3. Quy định giữ / đường giống</h4>
@@ -114,10 +114,9 @@ const PaymentSupport = () => {
             <div className="content-section">
               <h3>THÔNG TIN LIÊN HỆ HỖ TRỢ</h3>
               <ul>
-                <li><strong>Zalo bán hàng:</strong> 076 999 9295</li>
-                <li><strong>Gọi về Kỹ thuật viên:</strong> 086 999 7977</li>
-                <li><strong>Zalo kỹ thuật viên:</strong> 0977 34 7171</li>
-                <li><strong>Email:</strong> thuysantandung@gmail.com</li>
+                <li><strong>Zalo bán hàng:</strong> 089 958 9259</li>
+                <li><strong>Zalo kỹ thuật viên:</strong> 089 958 9259</li>
+                <li><strong>Email:</strong> anhkien051204@gmail.com</li>
               </ul>
             </div>
 

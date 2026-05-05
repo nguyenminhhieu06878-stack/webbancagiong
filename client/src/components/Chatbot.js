@@ -71,7 +71,7 @@ const Chatbot = () => {
       console.error('Lỗi chatbot:', error);
       const errorMessage = {
         type: 'bot',
-        text: 'Xin lỗi, có lỗi xảy ra. Vui lòng thử lại hoặc liên hệ hotline: 076 999 9295 📞',
+        text: 'Xin lỗi, có lỗi xảy ra. Vui lòng thử lại hoặc liên hệ hotline: 089 958 9259 📞',
         time: new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })
       };
       setMessages(prev => [...prev, errorMessage]);

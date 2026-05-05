@@ -28,8 +28,8 @@ const DeliveryPolicy = () => {
               <h3>1. Thông tin đơn vị Cung cấp</h3>
               <ul>
                 <li><strong>Tên đơn vị:</strong> Công Ty TNHH Thủy Sản Tùng Anh</li>
-                <li><strong>Địa chỉ:</strong> Quốc Lộ 1A - Lộc Thái - Mỹ Châu - Phù Mỹ - Bình Định</li>
-                <li><strong>Hotline:</strong> 076 999 9295 - 0977 34 7171</li>
+                <li><strong>Địa chỉ:</strong> Số 123 Đường Láng, Quận Đống Đa, Hà Nội</li>
+                <li><strong>Hotline:</strong> 089 958 9259</li>
               </ul>
             </div>
 

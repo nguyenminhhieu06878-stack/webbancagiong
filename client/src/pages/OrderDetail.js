@@ -266,7 +266,7 @@ const OrderDetail = () => {
 
               <div className="support-info">
                 <p>☎ Hotline hỗ trợ:</p>
-                <strong>076 999 9295</strong>
+                <strong>089 958 9259</strong>
               </div>
             </div>
           </div>

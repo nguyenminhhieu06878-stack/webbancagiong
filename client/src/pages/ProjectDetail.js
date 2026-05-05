@@ -28,21 +28,21 @@ Buổi lễ được thực hiện trang nghiêm, kết hợp tụng kinh nguy�
 
 Chương trình đã nhận được sự hưởng ứng nhiệt tình từ cộng đồng, tạm thời làm, sẽ góp phần chuyển hóa xã hội lòng từ hơn.`,
     images: [
-      'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png',
-      'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png',
-      'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png',
-      'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png',
-      'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png',
+      'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png',
+      'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png',
+      'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png',
+      'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png',
+      'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png',
     ]
   };
 
   const relatedProjects = [
-    { id: 2, title: 'Thả Cá Phóng Sanh', image: 'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png' },
-    { id: 3, title: 'Thả Cá Phóng Sanh', image: 'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png' },
-    { id: 4, title: 'Thả Cá Phóng Sanh', image: 'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png' },
-    { id: 5, title: 'Thả Cá Phóng Sanh', image: 'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png' },
-    { id: 6, title: 'Thả Cá Phóng Sanh', image: 'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png' },
-    { id: 7, title: 'Thả Cá Phóng Sanh', image: 'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png' },
+    { id: 2, title: 'Thả Cá Phóng Sanh', image: 'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png' },
+    { id: 3, title: 'Thả Cá Phóng Sanh', image: 'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png' },
+    { id: 4, title: 'Thả Cá Phóng Sanh', image: 'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png' },
+    { id: 5, title: 'Thả Cá Phóng Sanh', image: 'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png' },
+    { id: 6, title: 'Thả Cá Phóng Sanh', image: 'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png' },
+    { id: 7, title: 'Thả Cá Phóng Sanh', image: 'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png' },
   ];
 
   return (

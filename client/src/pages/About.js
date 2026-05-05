@@ -77,21 +77,21 @@ const About = () => {
                     <FaPhone className="contact-icon" />
                     <div>
                       <strong>Hotline:</strong>
-                      <p>086.999.7977 - 076.999.9295</p>
+                      <p>089.958.9259</p>
                     </div>
                   </div>
                   <div className="contact-item">
                     <FaGlobe className="contact-icon" />
                     <div>
                       <strong>Website:</strong>
-                      <p>traicatandung.vn</p>
+                      <p>thuysantunganh.vn</p>
                     </div>
                   </div>
                   <div className="contact-item">
                     <FaMapMarkerAlt className="contact-icon" />
                     <div>
                       <strong>Địa chỉ:</strong>
-                      <p>QL1 A, thôn Lộc Thái, xã Mỹ Châu, huyện Phù Mỹ, tỉnh Bình Định</p>
+                      <p>Số 123 Đường Láng, Quận Đống Đa, Hà Nội</p>
                     </div>
                   </div>
                 </div>

@@ -354,7 +354,7 @@ const Home = () => {
           <div className="knowledge-grid">
             <Link to="/techniques/2" className="knowledge-card">
               <div className="knowledge-image">
-                <img src="https://traicatandung.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-28-300x225.png" alt="Kỹ thuật nuôi cá chình" />
+                <img src="https://thuysantunganh.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-28-300x225.png" alt="Kỹ thuật nuôi cá chình" />
                 <div className="knowledge-date">
                   <span className="day">25</span>
                   <span className="month">Th1</span>
@@ -368,7 +368,7 @@ const Home = () => {
             
             <Link to="/techniques/3" className="knowledge-card">
               <div className="knowledge-image">
-                <img src="https://traicatandung.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-27-300x225.png" alt="Cá trắm có có để nuôi không" />
+                <img src="https://thuysantunganh.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-27-300x225.png" alt="Cá trắm có có để nuôi không" />
                 <div className="knowledge-date">
                   <span className="day">24</span>
                   <span className="month">Th1</span>
@@ -382,7 +382,7 @@ const Home = () => {
             
             <Link to="/techniques/4" className="knowledge-card">
               <div className="knowledge-image">
-                <img src="https://traicatandung.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-24-300x225.png" alt="Chuẩn bị ao nuôi cá tra" />
+                <img src="https://thuysantunganh.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-24-300x225.png" alt="Chuẩn bị ao nuôi cá tra" />
                 <div className="knowledge-date">
                   <span className="day">23</span>
                   <span className="month">Th1</span>

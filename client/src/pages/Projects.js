@@ -7,13 +7,13 @@ const Projects = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const projects = [
-    { id: 1, title: 'Thả Cá Phóng Sanh', image: 'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png', category: 'phong-sanh' },
-    { id: 2, title: 'Thả Cá Phóng Sanh', image: 'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png', category: 'phong-sanh' },
-    { id: 3, title: 'Thả Cá Phóng Sanh', image: 'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png', category: 'phong-sanh' },
-    { id: 4, title: 'Thả Cá Phóng Sanh', image: 'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png', category: 'phong-sanh' },
-    { id: 5, title: 'Thả Cá Phóng Sanh', image: 'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png', category: 'phong-sanh' },
-    { id: 6, title: 'Thả Cá Phóng Sanh', image: 'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png', category: 'phong-sanh' },
-    { id: 7, title: 'Thả Cá Phóng Sanh', image: 'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png', category: 'phong-sanh' },
+    { id: 1, title: 'Thả Cá Phóng Sanh', image: 'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png', category: 'phong-sanh' },
+    { id: 2, title: 'Thả Cá Phóng Sanh', image: 'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png', category: 'phong-sanh' },
+    { id: 3, title: 'Thả Cá Phóng Sanh', image: 'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png', category: 'phong-sanh' },
+    { id: 4, title: 'Thả Cá Phóng Sanh', image: 'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png', category: 'phong-sanh' },
+    { id: 5, title: 'Thả Cá Phóng Sanh', image: 'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png', category: 'phong-sanh' },
+    { id: 6, title: 'Thả Cá Phóng Sanh', image: 'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png', category: 'phong-sanh' },
+    { id: 7, title: 'Thả Cá Phóng Sanh', image: 'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png', category: 'phong-sanh' },
   ];
 
   const filteredProjects = activeTab === 'all' 

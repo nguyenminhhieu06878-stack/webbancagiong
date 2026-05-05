@@ -37,12 +37,12 @@ const ProductDetail = () => {
         try {
           images = JSON.parse(data.images);
         } catch {
-          images = [data.image_url || 'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png'];
+          images = [data.image_url || 'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png'];
         }
       } else if (data.image_url) {
         images = [data.image_url];
       } else {
-        images = ['https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png'];
+        images = ['https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png'];
       }
       
       const productData = {
@@ -254,7 +254,7 @@ const ProductDetail = () => {
               >
                 THÊM VÀO GIỎ HÀNG
               </button>
-              <a href="tel:0769999295" className="btn-hotline">HOTLINE 076 999 9295</a>
+              <a href="tel:0899589259" className="btn-hotline">HOTLINE 089 958 9259</a>
             </div>
 
             <div className="commitment-box">
@@ -359,9 +359,9 @@ const ProductDetail = () => {
                 </ul>
 
                 <h3>3. Liên hệ hỗ trợ</h3>
-                <p><strong>Hotline:</strong> 076 999 9295</p>
-                <p><strong>Zalo:</strong> 076 999 9295</p>
-                <p><strong>Email:</strong> thuysantandung@gmail.com</p>
+                <p><strong>Hotline:</strong> 089 958 9259</p>
+                <p><strong>Zalo:</strong> 089 958 9259</p>
+                <p><strong>Email:</strong> anhkien051204@gmail.com</p>
               </div>
             )}
           </div>

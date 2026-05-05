@@ -73,18 +73,18 @@ const BuyingGuide = () => {
               <ul>
                 <li>Tuyệt đối không xả bao hoặc thả cá ra ao trước khi kiểm tra xong & chụp ảnh.</li>
                 <li>Phản hồi mọi vấn đề trong vòng 2 giờ kể từ khi nhận cá.</li>
-                <li>Gửi hình ảnh qua Zalo 0977 347 171 để được xác minh và hỗ trợ đổi trả nếu cần.</li>
+                <li>Gửi hình ảnh qua Zalo 089 958 9259 để được xác minh và hỗ trợ đổi trả nếu cần.</li>
               </ul>
             </div>
 
             <div className="content-section">
               <h3>IV. THÔNG TIN HỖ TRỢ</h3>
               <ul>
-                <li><strong>Zalo kỹ thuật viên:</strong> 0977 347 171</li>
-                <li><strong>Email:</strong> thuysantandung@gmail.com</li>
-                <li><strong>Website:</strong> thuysantandung.vn</li>
+                <li><strong>Zalo kỹ thuật viên:</strong> 089 958 9259</li>
+                <li><strong>Email:</strong> anhkien051204@gmail.com</li>
+                <li><strong>Website:</strong> thuysantunganh.vn</li>
               </ul>
-              <p><strong>Địa chỉ:</strong> QL1A, thôn Lộc Thái, xã Mỹ Châu, huyện Phù Mỹ, tỉnh Bình Định</p>
+              <p><strong>Địa chỉ:</strong> Số 123 Đường Láng, Quận Đống Đa, Hà Nội</p>
             </div>
 
             <div className="support-footer">

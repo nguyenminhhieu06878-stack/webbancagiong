@@ -123,7 +123,14 @@ const Checkout = () => {
           return;
         } catch (paymentError) {
           console.error('Lỗi tạo link thanh toán:', paymentError);
-          toast.error('Không thể tạo link thanh toán. Vui lòng thử lại.');
+          
+          // Hiển thị thông báo lỗi cụ thể
+          if (paymentError.response?.status === 503) {
+            toast.error('PayOS hiện chưa khả dụng. Vui lòng chọn phương thức thanh toán COD (Thanh toán khi nhận hàng).');
+          } else {
+            toast.error('Không thể tạo link thanh toán. Vui lòng thử lại hoặc chọn phương thức COD.');
+          }
+          
           setLoading(false);
           return;
         }
@@ -302,7 +309,7 @@ const Checkout = () => {
               </button>
 
               <div className="checkout-note">
-                <p>☎ Hotline: <strong>076 999 9295</strong></p>
+                <p>☎ Hotline: <strong>089 958 9259</strong></p>
                 <p>✓ Cam kết cá giống chất lượng cao</p>
               </div>
             </div>

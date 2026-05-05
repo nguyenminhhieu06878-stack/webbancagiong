@@ -31,15 +31,15 @@ const Footer = () => {
             <ul className="footer-list">
               <li>
                 <FaMapMarkerAlt className="footer-icon" />
-                <span>123 Đường Nguyễn Văn Linh, Quận 7, TP.HCM</span>
+                <span>Số 123 Đường Láng, Quận Đống Đa, Hà Nội</span>
               </li>
               <li>
                 <FaPhone className="footer-icon" />
-                <span>0123 456 789</span>
+                <a href="tel:0899589259" style={{ color: 'inherit', textDecoration: 'none' }}>089 958 9259</a>
               </li>
               <li>
                 <FaEnvelope className="footer-icon" />
-                <span>info@thuysan-tunganh.com</span>
+                <span>anhkien051204@gmail.com</span>
               </li>
             </ul>
           </div>

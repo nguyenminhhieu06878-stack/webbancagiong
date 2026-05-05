@@ -28,9 +28,9 @@ const WarrantyPolicy = () => {
               <h3>1. Thông tin đơn vị Bảo hành</h3>
               <ul>
                 <li><strong>Tên đơn vị:</strong> Công Ty TNHH Thủy Sản Tùng Anh</li>
-                <li><strong>Địa chỉ:</strong> Quốc Lộ 1A - Lộc Thái - Mỹ Châu - Phù Mỹ - Bình Định</li>
-                <li><strong>Hotline:</strong> 076 999 9295</li>
-                <li><strong>Người phụ trách kỹ thuật:</strong> 0977 34 7171</li>
+                <li><strong>Địa chỉ:</strong> Số 123 Đường Láng, Quận Đống Đa, Hà Nội</li>
+                <li><strong>Hotline:</strong> 089 958 9259</li>
+                <li><strong>Người phụ trách kỹ thuật:</strong> 089 958 9259</li>
                 <li><strong>Thời gian hỗ trợ kỹ thuật:</strong></li>
               </ul>
             </div>

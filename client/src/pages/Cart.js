@@ -194,7 +194,7 @@ const Cart = () => {
             </button>
 
             <div className="cart-note">
-              <p>☎ Hotline hỗ trợ: <strong>076 999 9295</strong></p>
+              <p>☎ Hotline hỗ trợ: <strong>089 958 9259</strong></p>
               <p>🚚 Miễn phí vận chuyển cho đơn hàng trên 5 triệu</p>
               <p>✓ Cam kết cá giống chất lượng cao</p>
             </div>

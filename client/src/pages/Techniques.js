@@ -15,7 +15,7 @@ const Techniques = () => {
       title: 'Kỹ thuật nuôi cá Chim Trắng giống',
       date: '01/12/2025',
       views: 423,
-      image: 'https://traicatandung.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-26-300x225.png',
+      image: 'https://thuysantunganh.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-26-300x225.png',
       content: 'Kỹ Thuật Nuôi Cá Chim Trắng Giống Hiệu Quả – Tăng Trưởng Nhanh, Ít Rủi Ro',
       description: 'Cá chim trắng giống là loại cá nước ngọt dễ nuôi, tốc độ lớn nhanh và có dầu ra rất ổn định quanh năm. Nhờ đặc tính ăn tạp – thích nghi tốt – ít bệnh, cá chim trắng trở thành lựa chọn hàng đầu cho người mới bắt đầu hoặc những phần vụ trang trại quy mô lớn.',
       sections: [
@@ -52,7 +52,7 @@ const Techniques = () => {
       title: 'Kỹ thuật nuôi cá chình trong bể xi măng bà con cần nắm',
       date: '25/01/2025',
       views: 356,
-      image: 'https://traicatandung.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-28-300x225.png',
+      image: 'https://thuysantunganh.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-28-300x225.png',
       content: 'Hướng Dẫn Chi Tiết Kỹ Thuật Nuôi Cá Chình Trong Bể Xi Măng',
       description: 'Từ việc chọn địa điểm, xây dựng bể nuôi, đến chăm sóc hàng ngày và phòng bệnh, mọi thứ đều được hướng dẫn chi tiết để đạt được hiệu suất tốt nhất trong kỹ thuật nuôi cá chình trong bể xi măng. Phương pháp này giúp tiết kiệm diện tích và dễ quản lý.',
       sections: [
@@ -88,7 +88,7 @@ const Techniques = () => {
       title: 'Cá trắm cỏ có dễ nuôi không? Tìm hiểu ngay',
       date: '24/01/2025',
       views: 289,
-      image: 'https://traicatandung.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-27-300x225.png',
+      image: 'https://thuysantunganh.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-27-300x225.png',
       content: 'Cá Trắm Cỏ - Loại Cá Dễ Nuôi, Hiệu Quả Kinh Tế Cao',
       description: 'Cá trắm cỏ là một loại cá nước ngọt, có kích thước lớn, ăn thơm ngon, giá trị dinh dưỡng cao. Cá trắm cỏ được nuôi phổ biến ở nhiều địa phương trên cả nước với chi phí thấp và hiệu quả cao. Đây là lựa chọn tốt cho người mới bắt đầu.',
       sections: [
@@ -124,7 +124,7 @@ const Techniques = () => {
       title: 'Chuẩn bị ao nuôi cá tra thương phẩm giúp đạt năng suất cao',
       date: '23/01/2025',
       views: 412,
-      image: 'https://traicatandung.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-24-300x225.png',
+      image: 'https://thuysantunganh.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-24-300x225.png',
       content: 'Hướng Dẫn Chuẩn Bị Ao Nuôi Cá Tra Đạt Năng Suất Cao',
       description: 'Nuôi cá tra là một ngành nghề dày thách thức nhưng cũng mang lại những cơ hội kinh doanh lớn khi được thực hiện đúng cách. Việc chuẩn bị môi trường ao nuôi là yếu tố quyết định đến năng suất và chất lượng cá thu hoạch.',
       sections: [
@@ -161,7 +161,7 @@ const Techniques = () => {
       title: 'Kỹ thuật nuôi cá Rô Phi đơn tính năng suất cao',
       date: '20/01/2025',
       views: 567,
-      image: 'https://traicatandung.vn/wp-content/uploads/2020/10/carodong-hinh1-100x100.jpg',
+      image: 'https://thuysantunganh.vn/wp-content/uploads/2020/10/carodong-hinh1-100x100.jpg',
       content: 'Hướng Dẫn Nuôi Cá Rô Phi Đơn Tính Đạt Năng Suất Cao Nhất',
       description: 'Cá Rô Phi đơn tính là giống cá được ưa chuộng nhất trong nuôi trồng thủy sản hiện nay. Với tốc độ sinh trưởng nhanh, khả năng thích nghi cao và dễ chăm sóc, cá Rô Phi đơn tính mang lại hiệu quả kinh tế cao cho người nuôi.',
       sections: [
@@ -199,7 +199,7 @@ const Techniques = () => {
       title: 'Phòng và trị bệnh cho cá giống hiệu quả',
       date: '18/01/2025',
       views: 445,
-      image: 'https://traicatandung.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-25-300x225.png',
+      image: 'https://thuysantunganh.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-25-300x225.png',
       content: 'Hướng Dẫn Phòng Và Trị Bệnh Cho Cá Giống Hiệu Quả',
       description: 'Bệnh tật là một trong những nguyên nhân gây thiệt hại lớn trong nuôi trồng thủy sản. Việc phòng bệnh đúng cách sẽ giúp giảm thiểu rủi ro và tăng năng suất. Bài viết này hướng dẫn chi tiết các biện pháp phòng và trị bệnh hiệu quả.',
       sections: [
@@ -237,7 +237,7 @@ const Techniques = () => {
       title: 'Cách chọn cá giống chất lượng cho ao nuôi',
       date: '15/01/2025',
       views: 389,
-      image: 'https://traicatandung.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-26-300x225.png',
+      image: 'https://thuysantunganh.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-26-300x225.png',
       content: 'Bí Quyết Chọn Cá Giống Chất Lượng Cao',
       description: 'Chọn cá giống tốt là bước đầu tiên quyết định đến thành công của mô hình nuôi. Cá giống khỏe mạnh sẽ có tỷ lệ sống cao và phát triển tốt. Bài viết này chia sẻ kinh nghiệm chọn cá giống chất lượng từ các chuyên gia.',
       sections: [
@@ -273,7 +273,7 @@ const Techniques = () => {
       title: 'Kỹ thuật nuôi lươn không bùn trong bể xi măng',
       date: '12/01/2025',
       views: 523,
-      image: 'https://traicatandung.vn/wp-content/uploads/2023/03/51.png',
+      image: 'https://thuysantunganh.vn/wp-content/uploads/2023/03/51.png',
       content: 'Hướng Dẫn Nuôi Lươn Không Bùn Hiệu Quả',
       description: 'Nuôi lươn không bùn là phương pháp nuôi hiện đại, sạch sẽ và dễ quản lý. Phương pháp này giúp tiết kiệm diện tích và dễ dàng thu hoạch. Đây là xu hướng nuôi lươn được nhiều người áp dụng thành công.',
       sections: [
@@ -311,7 +311,7 @@ const Techniques = () => {
       title: 'Quản lý chất lượng nước trong ao nuôi cá',
       date: '10/01/2025',
       views: 478,
-      image: 'https://traicatandung.vn/wp-content/uploads/2020/10/cach-tha-ca-giong-dat-ty-le-song-cao-300x197.jpg',
+      image: 'https://thuysantunganh.vn/wp-content/uploads/2020/10/cach-tha-ca-giong-dat-ty-le-song-cao-300x197.jpg',
       content: 'Hướng Dẫn Quản Lý Chất Lượng Nước Trong Ao Nuôi',
       description: 'Chất lượng nước là yếu tố quan trọng nhất ảnh hưởng đến sức khỏe và tốc độ sinh trưởng của cá. Cần theo dõi và điều chỉnh thường xuyên các thông số nước để đảm bảo môi trường sống tốt nhất cho cá.',
       sections: [
@@ -354,7 +354,7 @@ const Techniques = () => {
       id: 2,
       title: 'Kỹ thuật nuôi cá chình trong bể xi măng bà con cần nắm',
       description: 'Từ việc chọn địa điểm, xây dựng bể nuôi, đến chăm sóc hàng ngày và phòng bệnh, mọi thứ đều được hướng dẫn chi tiết để đạt được hiệu suất tốt nhất trong kỹ thuật...',
-      image: 'https://traicatandung.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-28-300x225.png',
+      image: 'https://thuysantunganh.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-28-300x225.png',
       date: '25',
       month: 'Th1'
     },
@@ -362,7 +362,7 @@ const Techniques = () => {
       id: 3,
       title: 'Cá trắm cỏ có dễ nuôi không? Tìm hiểu ngay',
       description: 'Cá trắm cỏ là một loại cá nước ngọt, có kích thước lớn, ăn thơm ngon, giá trị dinh dưỡng cao. Cá trắm cỏ được nuôi phổ biến ở nhiều địa phương trên cả nước...',
-      image: 'https://traicatandung.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-27-300x225.png',
+      image: 'https://thuysantunganh.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-27-300x225.png',
       date: '24',
       month: 'Th1'
     },
@@ -370,7 +370,7 @@ const Techniques = () => {
       id: 4,
       title: 'Chuẩn bị ao nuôi cá tra thương phẩm giúp đạt năng suất cao',
       description: 'Nuôi cá tra là một ngành nghề dày thách thức nhưng cũng mang lại những cơ hội kinh doanh lớn khi được thực hiện đúng cách. Việc chuẩn bị môi trường ao nu...',
-      image: 'https://traicatandung.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-24-300x225.png',
+      image: 'https://thuysantunganh.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-24-300x225.png',
       date: '23',
       month: 'Th1'
     }

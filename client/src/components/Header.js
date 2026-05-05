@@ -127,7 +127,7 @@ const Header = () => {
     const categoryProducts = getProductsByCategory(categoryId);
     return categoryProducts.map(product => (
       <Link key={product.id} to={`/products/${product.id}`} className="product-item-mega">
-        <img src={product.image_url || 'https://traicatandung.vn/wp-content/uploads/2025/06/92-300x200.png'} alt={product.name} />
+        <img src={product.image_url || 'https://thuysantunganh.vn/wp-content/uploads/2025/06/92-300x200.png'} alt={product.name} />
         <span>{product.name}</span>
       </Link>
     ));
@@ -189,10 +189,10 @@ const Header = () => {
                 <FaPhone className="phone-icon" />
                 <div className="contact-info">
                   <span className="hotline-label">Hotline</span>
-                  <span className="hotline-number">076 999 9295</span>
+                  <span className="hotline-number">089 958 9259</span>
                 </div>
               </div>
-              <button className="order-btn">ĐẶT HÀNG NHANH</button>
+              <a href="tel:0899589259" className="order-btn">ĐẶT HÀNG NHANH</a>
             </div>
 
             {/* Mobile Menu Toggle - Only show on mobile */}

@@ -11,7 +11,7 @@ const TechniquesOnly = () => {
       id: 1,
       title: 'Kỹ thuật nuôi cá Chim Trắng giống',
       excerpt: 'Cá chim trắng giống là loại cá nước ngọt dễ nuôi, tốc độ lớn nhanh và có dầu ra rất ổn định quanh năm. Nhờ đặc tính ăn tạp – thích nghi tốt – ít bệnh...',
-      image: 'https://traicatandung.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-26-300x225.png',
+      image: 'https://thuysantunganh.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-26-300x225.png',
       date: '01/12/2025',
       views: 423,
       category: 'Kỹ thuật nuôi'
@@ -20,7 +20,7 @@ const TechniquesOnly = () => {
       id: 2,
       title: 'Kỹ thuật nuôi cá chình trong bể xi măng bà con cần nắm',
       excerpt: 'Từ việc chọn địa điểm, xây dựng bể nuôi, đến chăm sóc hàng ngày và phòng bệnh, mọi thứ đều được hướng dẫn chi tiết để đạt được hiệu suất tốt nhất...',
-      image: 'https://traicatandung.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-28-300x225.png',
+      image: 'https://thuysantunganh.vn/wp-content/uploads/2024/01/Thiet-ke-chua-co-ten-28-300x225.png',
       date: '25/01/2025',
       views: 356,
       category: 'Kỹ thuật nuôi'
@@ -29,7 +29,7 @@ const TechniquesOnly = () => {
       id: 5,
       title: 'Kỹ thuật nuôi cá Rô Phi đơn tính năng suất cao',
       excerpt: 'Cá Rô Phi đơn tính là giống cá được ưa chuộng nhất trong nuôi trồng thủy sản hiện nay. Với tốc độ sinh trưởng nhanh, khả năng thích nghi cao...',
-      image: 'https://traicatandung.vn/wp-content/uploads/2020/10/carodong-hinh1-100x100.jpg',
+      image: 'https://thuysantunganh.vn/wp-content/uploads/2020/10/carodong-hinh1-100x100.jpg',
       date: '20/01/2025',
       views: 567,
       category: 'Kỹ thuật nuôi'
@@ -38,7 +38,7 @@ const TechniquesOnly = () => {
       id: 8,
       title: 'Kỹ thuật nuôi lươn không bùn trong bể xi măng',
       excerpt: 'Nuôi lươn không bùn là phương pháp nuôi hiện đại, sạch sẽ và dễ quản lý. Phương pháp này giúp tiết kiệm diện tích và dễ dàng thu hoạch...',
-      image: 'https://traicatandung.vn/wp-content/uploads/2023/03/51.png',
+      image: 'https://thuysantunganh.vn/wp-content/uploads/2023/03/51.png',
       date: '12/01/2025',
       views: 523,
       category: 'Kỹ thuật nuôi'
