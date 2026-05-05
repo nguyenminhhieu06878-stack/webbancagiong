@@ -273,17 +273,29 @@ router.put('/orders/:id/status', authenticateAdmin, (req, res) => {
     return res.status(400).json({ error: 'Trạng thái không hợp lệ' });
   }
   
-  db.run(
-    'UPDATE orders SET status = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?',
-    [status, id],
-    function(err) {
+  // Kiểm tra phương thức thanh toán của đơn hàng
+  db.get('SELECT payment_method FROM orders WHERE id = ?', [id], (err, order) => {
+    if (err) return res.status(500).json({ error: err.message });
+    if (!order) return res.status(404).json({ error: 'Không tìm thấy đơn hàng' });
+    
+    // Nếu đơn hàng COD và trạng thái là "delivered", tự động cập nhật payment_status = "paid"
+    // Vì COD = thanh toán khi nhận hàng, nên đã giao = đã thanh toán
+    let updateQuery = 'UPDATE orders SET status = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?';
+    let params = [status, id];
+    
+    if (order.payment_method === 'cod' && status === 'delivered') {
+      updateQuery = 'UPDATE orders SET status = ?, payment_status = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?';
+      params = [status, 'paid', id];
+    }
+    
+    db.run(updateQuery, params, function(err) {
       if (err) return res.status(500).json({ error: err.message });
       if (this.changes === 0) {
         return res.status(404).json({ error: 'Không tìm thấy đơn hàng' });
       }
       res.json({ message: 'Cập nhật trạng thái thành công', status });
-    }
-  );
+    });
+  });
 });
 
 // GET - Danh sách sản phẩm
