@@ -193,4 +193,56 @@ router.post('/cancel-payment/:orderId', authenticateToken, async (req, res) => {
   }
 });
 
+// POST - Xác nhận thanh toán thành công (sau khi kiểm tra từ PayOS)
+router.post('/confirm-payment/:orderId', authenticateToken, async (req, res) => {
+  try {
+    const { orderId } = req.params;
+    const customerId = req.user.id;
+
+    console.log(`🔍 Confirming payment for order #${orderId} by customer #${customerId}`);
+
+    // Kiểm tra đơn hàng có thuộc về khách hàng này không
+    db.get(
+      'SELECT * FROM orders WHERE id = ? AND customer_id = ?',
+      [orderId, customerId],
+      (err, order) => {
+        if (err) {
+          console.error('❌ Database error:', err);
+          return res.status(500).json({ error: 'Lỗi server' });
+        }
+
+        if (!order) {
+          console.error('❌ Order not found or not owned by customer');
+          return res.status(404).json({ error: 'Không tìm thấy đơn hàng' });
+        }
+
+        // Cập nhật trạng thái thanh toán
+        db.run(
+          'UPDATE orders SET payment_status = ?, status = ?, updated_at = CURRENT_TIMESTAMP WHERE id = ?',
+          ['paid', 'confirmed', orderId],
+          function(err) {
+            if (err) {
+              console.error('❌ Update error:', err);
+              return res.status(500).json({ error: 'Lỗi cập nhật đơn hàng' });
+            }
+
+            console.log(`✅ Order #${orderId} confirmed: ${this.changes} rows updated`);
+            
+            res.json({
+              success: true,
+              message: 'Đã xác nhận thanh toán thành công'
+            });
+          }
+        );
+      }
+    );
+  } catch (error) {
+    console.error('❌ Lỗi xác nhận thanh toán:', error);
+    res.status(500).json({ 
+      error: 'Không thể xác nhận thanh toán',
+      details: error.message 
+    });
+  }
+});
+
 module.exports = router;
